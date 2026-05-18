@@ -1,7 +1,7 @@
-import { SessionForm } from './components/SessionForm'
-import { SessionList } from './components/SessionList'
-import { StatsBanner } from './components/StatsBanner'
-import { useSessions } from './hooks/useSessions'
+import { SessionForm } from './components/SessionForm.jsx'
+import { SessionList } from './components/SessionList.jsx'
+import { StatsBanner } from './components/StatsBanner.jsx'
+import { useSessions } from './hooks/useSessions.js'
 import './App.css'
 
 function App() {

@@ -1,17 +1,11 @@
-import type { StudySession } from '../lib/sessions'
-
-type SessionListProps = {
-  sessions: StudySession[]
-}
-
-function formatLoggedAt(isoDate: string): string {
+function formatLoggedAt(isoDate) {
   return new Intl.DateTimeFormat(undefined, {
     dateStyle: 'medium',
     timeStyle: 'short',
   }).format(new Date(isoDate))
 }
 
-export function SessionList({ sessions }: SessionListProps) {
+export function SessionList({ sessions }) {
   if (sessions.length === 0) {
     return (
       <section className="session-list empty">

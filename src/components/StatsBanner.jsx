@@ -1,11 +1,6 @@
-import { formatDuration, totalMinutes } from '../lib/sessions'
-import type { StudySession } from '../lib/sessions'
+import { formatDuration, totalMinutes } from '../lib/sessions.js'
 
-type StatsBannerProps = {
-  sessions: StudySession[]
-}
-
-export function StatsBanner({ sessions }: StatsBannerProps) {
+export function StatsBanner({ sessions }) {
   const total = totalMinutes(sessions)
 
   return (

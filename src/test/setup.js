@@ -2,25 +2,25 @@ import '@testing-library/jest-dom/vitest'
 import { cleanup } from '@testing-library/react'
 import { afterEach, beforeEach } from 'vitest'
 
-const storage = new Map<string, string>()
+const storage = new Map()
 
-const localStorageMock: Storage = {
+const localStorageMock = {
   get length() {
     return storage.size
   },
   clear() {
     storage.clear()
   },
-  getItem(key: string) {
+  getItem(key) {
     return storage.get(key) ?? null
   },
-  key(index: number) {
+  key(index) {
     return [...storage.keys()][index] ?? null
   },
-  removeItem(key: string) {
+  removeItem(key) {
     storage.delete(key)
   },
-  setItem(key: string, value: string) {
+  setItem(key, value) {
     storage.set(key, value)
   },
 }

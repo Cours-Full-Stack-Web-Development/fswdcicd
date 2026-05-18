@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
-import App from './App'
+import App from './App.jsx'
 
 describe('App', () => {
   it('renders the study log shell', () => {
@@ -14,12 +14,12 @@ describe('App', () => {
     const user = userEvent.setup()
     render(<App />)
 
-    await user.type(screen.getByLabelText(/subject/i), 'TypeScript')
+    await user.type(screen.getByLabelText(/subject/i), 'JavaScript')
     await user.clear(screen.getByLabelText(/minutes/i))
     await user.type(screen.getByLabelText(/minutes/i), '30')
     await user.click(screen.getByRole('button', { name: /add session/i }))
 
-    expect(screen.getByText('TypeScript')).toBeInTheDocument()
+    expect(screen.getByText('JavaScript')).toBeInTheDocument()
     expect(screen.getByText('30 min')).toBeInTheDocument()
     expect(screen.getByLabelText(/study statistics/i)).toHaveTextContent('1')
     expect(screen.getByLabelText(/study statistics/i)).toHaveTextContent('30m')

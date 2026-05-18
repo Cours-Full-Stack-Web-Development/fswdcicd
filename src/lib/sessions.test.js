@@ -4,7 +4,7 @@ import {
   formatDuration,
   totalMinutes,
   validateSessionInput,
-} from './sessions'
+} from './sessions.js'
 
 describe('validateSessionInput', () => {
   it('accepts valid input', () => {
