@@ -3,14 +3,12 @@ import {
   createSession,
   loadSessions,
   saveSessions,
-  type SessionInput,
-  type StudySession,
-} from '../lib/sessions'
+} from '../lib/sessions.js'
 
 export function useSessions() {
-  const [sessions, setSessions] = useState<StudySession[]>(() => loadSessions())
+  const [sessions, setSessions] = useState(() => loadSessions())
 
-  function addSession(input: SessionInput) {
+  function addSession(input) {
     const next = [createSession(input), ...sessions]
     setSessions(next)
     saveSessions(next)

@@ -1,17 +1,12 @@
-import { type FormEvent, useState } from 'react'
-import { validateSessionInput } from '../lib/sessions'
-import type { SessionInput } from '../lib/sessions'
+import { useState } from 'react'
+import { validateSessionInput } from '../lib/sessions.js'
 
-type SessionFormProps = {
-  onAdd: (input: SessionInput) => void
-}
-
-export function SessionForm({ onAdd }: SessionFormProps) {
+export function SessionForm({ onAdd }) {
   const [subject, setSubject] = useState('')
   const [minutes, setMinutes] = useState('')
-  const [errors, setErrors] = useState<string[]>([])
+  const [errors, setErrors] = useState([])
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event) {
     event.preventDefault()
 
     const result = validateSessionInput(subject, minutes)
