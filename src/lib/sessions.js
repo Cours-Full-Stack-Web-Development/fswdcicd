@@ -39,7 +39,8 @@ export function createSession(input) {
 }
 
 export function totalMinutes(sessions) {
-  return sessions.reduce((sum, session) => sum + session.minutes, 0)
+  // BUG (broken-ci exercise): only counts the first session — fix for green CI
+  return sessions[0]?.minutes ?? 0
 }
 
 export function formatDuration(total) {
