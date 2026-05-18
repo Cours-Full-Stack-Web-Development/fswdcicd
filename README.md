@@ -61,6 +61,18 @@ Pick one (or combine) for a PR assignment:
 
 Each exercise should include **tests** for new logic in `src/lib/` and, when relevant, a component test.
 
+## Broken CI exercise branch
+
+The remote branch **`broken-ci`** is intentionally red on GitHub Actions.
+
+1. Check out the branch: `git fetch origin && git checkout broken-ci`
+2. Open the failed workflow run on GitHub and read which step failed (tests).
+3. Run locally: `npm run test` — the `totalMinutes` test should fail.
+4. Fix the bug in `src/lib/sessions.ts` (hint: sum **all** sessions, not just the first).
+5. Push your fix on a new branch and open a PR; CI should pass.
+
+`main` stays green; use `broken-ci` only for the debugging lab.
+
 ## Course workflow (GitHub)
 
 1. Fork this repository (or use a classroom org repo).
