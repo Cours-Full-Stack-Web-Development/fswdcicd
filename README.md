@@ -17,14 +17,14 @@ Open the URL printed in the terminal (usually `http://localhost:5173`).
 
 ## Scripts
 
-| Command           | Purpose                          |
-| ----------------- | -------------------------------- |
-| `npm run dev`     | Start dev server with HMR        |
-| `npm run build`   | Production build                 |
-| `npm run test`    | Run unit tests once (CI uses this) |
-| `npm run test:watch` | Run tests in watch mode       |
-| `npm run lint`    | ESLint                           |
-| `npm run preview` | Preview production build locally |
+| Command              | Purpose                            |
+| -------------------- | ---------------------------------- |
+| `npm run dev`        | Start dev server with HMR          |
+| `npm run build`      | Production build                   |
+| `npm run test`       | Run unit tests once (CI uses this) |
+| `npm run test:watch` | Run tests in watch mode            |
+| `npm run lint`       | ESLint                             |
+| `npm run preview`    | Preview production build locally   |
 
 ## Project layout
 
@@ -47,20 +47,6 @@ On every push and pull request to `main` / `master`, [`.github/workflows/ci.yml`
 3. `npm run test`
 4. `npm run build`
 
-Students should see a green check on the PR when all steps pass.
-
-## Suggested student exercises
-
-Pick one (or combine) for a PR assignment:
-
-1. **Delete a session** — add a remove button and update storage.
-2. **Filter by subject** — search or dropdown to narrow the list.
-3. **Weekly goal** — e.g. target 300 minutes/week with a progress bar.
-4. **Export CSV** — download sessions as a file.
-5. **Validation tweak** — allow 15-minute increments only; update tests accordingly.
-
-Each exercise should include **tests** for new logic in `src/lib/` and, when relevant, a component test.
-
 ## Broken CI exercise branch
 
 The remote branch **`broken-ci`** is intentionally red on GitHub Actions.
@@ -73,14 +59,6 @@ The remote branch **`broken-ci`** is intentionally red on GitHub Actions.
 
 `main` stays green; use `broken-ci` only for the debugging lab.
 
-## Course workflow (GitHub)
-
-1. Fork this repository (or use a classroom org repo).
-2. Create a branch: `git checkout -b feature/delete-session`
-3. Implement the feature and run `npm run lint && npm run test && npm run build` locally.
-4. Push and open a pull request.
-5. Open the **Checks** tab on the PR and confirm CI is green before merging.
-
 ## License
 
-MIT — use freely for teaching.
+MIT
